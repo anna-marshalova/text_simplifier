@@ -11,9 +11,9 @@ nltk.download('stopwords')
 
 
 class BaselineSimplifier:
-    def __init__(self, fasttext_model=None, synonym_dict={}, complex_words=[]):
-        self.synonym_dict = synonym_dict
-        self.complex_words = complex_words
+    def __init__(self, fasttext_model = None):
+        self.synonym_dict = {}
+        self.complex_words = []
         self.fasttext_model = fasttext_model
         self.tokenize = nltk.word_tokenize
         self.stopwords = nltk.corpus.stopwords.words('russian')
