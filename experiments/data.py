@@ -24,4 +24,4 @@ def prepare_data_for_eval(data):
 def info(paths, datasets):
     for path, dataset in zip(paths, datasets):
         dataset_name = path.split('/')[-1]
-        print(f'Name: {dataset_name}\nSize: {dataset.shape[0]}')
+        print(f'Name: {dataset_name}  Size: {dataset.shape[0]}')

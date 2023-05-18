@@ -11,6 +11,7 @@ import spacy
 from pymorphy2 import MorphAnalyzer
 from Levenshtein import distance as lev
 
+from baseline.paths import SYNONYMS_PATH, COMPLEX_WORDS_PATH, WORDLIST_PATH
 
 
 class BaselineSimplifier:
@@ -83,7 +84,7 @@ class BaselineSimplifier:
             # для синонимов храним их близость к исходному слову
             synonym_dict[source].update({target: (1 - distance)})
             self.synonym_dict = synonym_dict
-        self.gold_standart_synonyms = self.load_gold_standart_synonyms(**kwargs)
+        self.gold_standard_synonyms = self.load_gold_standard_synonyms(**kwargs)
     
     def filter_synonyms_by_pos(self, token, synonyms):
         candidates = []
@@ -123,8 +124,8 @@ class BaselineSimplifier:
                 token = token.lower()
                 lemma = self.morph.parse(token)[0].normal_form
                 # если слово сложное, ищем для него более простую синонимичную замену. если ее нет - удаляем слово
-                if gc_synonyms and lemma in self.gold_standart_synonyms:
-                    simple_sub = self.gold_standart_synonyms[lemma]
+                if gc_synonyms and lemma in self.gold_standard_synonyms:
+                    simple_sub = self.gold_standard_synonyms[lemma]
                     if inflect:
                         simple_sub = self.inflect_like(simple_sub, token)
                     simple_text.append(simple_sub)
@@ -180,24 +181,24 @@ class BaselineSimplifier:
             return result.word
         return word
 
-    def save_data(self, synonyms_path='synonyms.json', complex_list_path='complex_words.json'):
+    def save_data(self, synonyms_path=SYNONYMS_PATH, complex_list_path=COMPLEX_WORDS_PATH):
         with open(synonyms_path, 'w', encoding='utf-8') as file:
             json.dump(self.synonym_dict, file, ensure_ascii=False)
         with open(complex_list_path, 'w', encoding='utf-8') as file:
             json.dump(list(self.complex_words), file, ensure_ascii=False)
 
-    def load_data(self, synonyms_path='synonyms.json', complex_list_path='complex_words.json', **kwargs):
+    def load_data(self, synonyms_path=SYNONYMS_PATH, complex_list_path=COMPLEX_WORDS_PATH, **kwargs):
         with open(synonyms_path, 'r', encoding='utf-8') as file:
             self.synonym_dict = json.load(file)
         with open(complex_list_path, 'r', encoding='utf-8') as file:
             self.complex_words = json.load(file)
-        self.gold_standart_synonyms = self.load_gold_standart_synonyms(**kwargs)
+        self.gold_standard_synonyms = self.load_gold_standard_synonyms(**kwargs)
     
-    def load_gold_standart_synonyms(self, gs_synonyms_path = '/content/RuAdapt_Word_Lists/dictionary_synonyms.txt'):
-        gold_standart_synonyms = {}
+    def load_gold_standard_synonyms(self, gs_synonyms_path = WORDLIST_PATH):
+        gold_standard_synonyms = {}
         with open(gs_synonyms_path, 'r', encoding='utf-8') as file:
             pairs = file.readlines()
             for pair in pairs:
                 complex_word, simple_word = pair.split(' ')
-                gold_standart_synonyms.update({complex_word: simple_word})
-        return gold_standart_synonyms
+                gold_standard_synonyms.update({complex_word: simple_word})
+        return gold_standard_synonyms

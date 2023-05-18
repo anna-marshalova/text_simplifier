@@ -1,4 +1,4 @@
 Levenshtein
 nltk
 pandas
-rusyllab
+git+https://github.com/Koziev/rusyllab
