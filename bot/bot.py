@@ -1,7 +1,7 @@
 import time
 import logging
 from aiogram import Bot, Dispatcher, executor, types
-from utils import MODEL_NAME
+from utils import MODEL_NAME, MODEL_ID
 from tg_token import TOKEN
 from simplifier import Simplifier
 
@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot=bot)
-simplifier = Simplifier(MODEL_NAME)
+simplifier = Simplifier(MODEL_NAME, MODEL_ID)
 logging.info(f'Model loaded successfully! {time.asctime()}')
 
 @dp.message_handler(commands=["start"])

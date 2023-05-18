@@ -1,0 +1,8 @@
+gensim
+Levenshtein
+nltk==3.6.5
+pandas==1.5.3
+pymorphy2==0.9.1
+scipy
+spacy==3.5.0
+ru-core-news-lg @ https://github.com/explosion/spacy-models/releases/download/ru_core_news_lg-3.5.0/ru_core_news_lg-3.5.0-py3-none-any.whl

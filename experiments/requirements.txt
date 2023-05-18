@@ -1,0 +1,4 @@
+Levenshtein
+nltk
+pandas
+rusyllab
