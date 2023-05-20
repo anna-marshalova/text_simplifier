@@ -1,8 +1,9 @@
 import os
+import nltk
+nltk.download('punkt')
 import torch
 from transformers import T5ForConditionalGeneration, AutoTokenizer
 from utils import ROOT, paths
-
 
 class Simplifier:
     def __init__(self, model_name, model_id):
@@ -22,11 +23,19 @@ class Simplifier:
             return_tensors='pt')
         return inputs['input_ids'].squeeze(), inputs['attention_mask'].squeeze()
 
-    def simplify(self, text, max_new_tokens=10):
-        input_ids, attention_mask = self.tokenize(text)
+    def simplify_sent(self, sent):
+        input_ids, attention_mask = self.tokenize(sent)
         with torch.no_grad():
             output = self.model.generate(input_ids=input_ids.unsqueeze(0).to(self.DEVICE),
                                      attention_mask=attention_mask.unsqueeze(0).to(self.DEVICE),
                                      do_sample = False,
+                                     repetition_penalty = 10.0,
                                      max_new_tokens=len(input_ids)*2)
         return self.tokenizer.decode(output.squeeze(0), skip_special_tokens=True)
+
+    def simplify(self, text):
+        sents = nltk.sent_tokenize(text)
+        simplified_sents = []
+        for sent in sents:
+            simplified_sents.append(self.simplify_sent(sent))
+        return ' '.join(simplified_sents)
