@@ -7,6 +7,10 @@ from utils import ROOT, paths
 
 class Simplifier:
     def __init__(self, model_name, model_id):
+        """
+        :param model_name: Полное название модели с huggingface
+        :param model_id: Короткое название модели (см. seq2seq.utils MODEL_CONFIG)
+        """
         self.DEVICE = 'cpu'
         self.ROOT = ROOT
         self.model_name = model_name
@@ -17,6 +21,11 @@ class Simplifier:
         self.model = torch.load(self.checkpoints_path, map_location = self.DEVICE)
 
     def tokenize(self, text):
+        """
+        Токенизация текста
+        :param text: Текст
+        :return: Токенизированный текст и маски внимания
+        """
         inputs = self.tokenizer(
             text,
             return_attention_mask=True,
@@ -24,6 +33,11 @@ class Simplifier:
         return inputs['input_ids'].squeeze(), inputs['attention_mask'].squeeze()
 
     def simplify_sent(self, sent):
+        """
+        Упрощение одного предложения
+        :param sent: Предложение
+        :return: Упрощеннное предложение
+        """
         input_ids, attention_mask = self.tokenize(sent)
         with torch.no_grad():
             output = self.model.generate(input_ids=input_ids.unsqueeze(0).to(self.DEVICE),
@@ -34,8 +48,12 @@ class Simplifier:
         return self.tokenizer.decode(output.squeeze(0), skip_special_tokens=True)
 
     def simplify(self, text):
+        """
+        Упрощение текста
+        :param text: Текст
+        :return: Упрощеннный текст
+        """
+        # делим текст на предложения и упрощаем отдельно, т.к. модель была обучена на упрощении предложений
         sents = nltk.sent_tokenize(text)
-        simplified_sents = []
-        for sent in sents:
-            simplified_sents.append(self.simplify_sent(sent))
+        simplified_sents = [self.simplify_sent(sent) for sent in sents]
         return ' '.join(simplified_sents)

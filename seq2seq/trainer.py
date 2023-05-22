@@ -10,8 +10,28 @@ from seq2seq.inference import batch_inference, example
 from experiments.evaluation import compute_corpus_metrics
 from experiments.utils import stringify_dict
 
-def train(model, train_loader, val_loader, model_id = 'rut5-base', dataset_name = 'senteval+ruadapt', max_epochs=30, cleanup_step=1, window=50, lr=3e-5, save_checkpoints=True,
+def train(model, tokenizer, train_loader, val_loader, model_id = 'rut5-base', dataset_name = 'senteval+ruadapt', max_epochs=30, cleanup_step=1, window=50, lr=3e-5, save_checkpoints=True,
           checkpoints_path=None, logger = None, orig = None, refs = None, save_epoch = 5, report_epoch = 5):
+    """
+    Обучение модели
+    :param model:
+    :param tokenizer:
+    :param train_loader:
+    :param val_loader:
+    :param model_id: Название модели (см. seq2seq.utils MODEL_CONFIG) (для идентификации экспериментов и чекпоинтов)
+    :param dataset_name: Название датасета (для идентификации экспериментов и чекпоинтов)
+    :param max_epochs: Количество эпох обучения
+    :param cleanup_step: Количество шагов, после которого выполняется отчистка памяти
+    :param window: Размер окна скользящего среднего для подсчета лосса
+    :param lr: Шаг обучения
+    :param save_checkpoints: Сохранять ли чекпоинты модели
+    :param checkpoints_path: Путь к чекпоинтам модели
+    :param logger:
+    :param orig: Сложные тексты (для подсчета метрик)
+    :param refs: Упрощенные тексты из датасета (для подсчета метрик)
+    :param save_epoch: Количество эпох, после которых сохраняются чекпоинты модели
+    :param report_epoch: Количество эпох, после которого считаются корпусные метрики (bleu, sari, etc)
+    """
     if save_checkpoints and not checkpoints_path:
         print('Path to checkpoints not provided')
     cleanup()

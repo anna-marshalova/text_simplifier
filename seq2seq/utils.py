@@ -4,7 +4,7 @@ import numpy as np
 from transformers import T5ForConditionalGeneration, MT5ForConditionalGeneration
 
 BATCH_SIZE = 32
-RANDOM_SEED = 42
+RANDOM_STATE = 42
 
 MODEL_CONFIG = {
     'rut5-base':{'pretrained_model_name':'sberbank-ai/ruT5-base', 'model_class':T5ForConditionalGeneration},

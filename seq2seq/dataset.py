@@ -5,7 +5,16 @@ from experiments.data import SOURCE_COLUMN_NAME, TARGET_COLUMN_NAME
 
 
 class Dataset(torch.utils.data.Dataset):
+    """
+    Датасет
+    """
     def __init__(self, data, tokenizer, max_length=50, train=True):
+        """
+        :param data: Датафрейм: со сложными текстами и их упрощеннными версиями
+        :param tokenizer: Токенизатор
+        :param max_length: Максимальная длина текста в bpe-токенах. Остальные токены обрезаются
+        :param train: Тренировочный датасет (True) или тестовый (False)
+        """
         self.df = data
         self.max_length = max_length
         self.tokenizer = tokenizer
