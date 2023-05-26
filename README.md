@@ -1,7 +1,7 @@
 # Упрощение текста
 
 Сервис для автоматического упрощения текстов на русском языке. 
-Проект в раках курса [My First Data Project 2](https://ai.itmo.ru/course) от университета ИТМО.
+Проект в раках курса [My First Data Project](https://ai.itmo.ru/course) от университета ИТМО.
 
 **Корпус**: [RuSimpleSentEval](https://github.com/dialogue-evaluation/RuSimpleSentEval) + [RuAdapt](https://github.com/Digital-Pushkin-Lab/RuAdapt).
 
@@ -18,5 +18,5 @@
 Код для экспериментов и подсчета метрик - в папке `experiments`.
 Чекпоинты метрик хранятся в файле с логами.
 
-**Обертка**: cервис обернут в **телеграм-бота**, но доступен пока только локально. 
+**Обертка**: cервис обернут в телеграм-бота, но доступен пока только локально. 
 Код в папке `bot`. 
