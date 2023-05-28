@@ -1,0 +1,88 @@
+ model:rut5-base sari: 27.183 bleu: 43.039 time:Thu May 11 10:46:07 2023
+ model:rut5-base sari: 27.109 bleu: 44.285 time:Thu May 11 10:56:18 2023
+ model:rut5-base sari: 28.008 bleu: 68.037 time:Thu May 11 11:35:12 2023
+ model:rut5-base sari: 30.908 bleu: 18.477 time:Thu May 11 11:46:19 2023
+ model:rut5-base sari: 29.206 bleu: 57.028 time:Thu May 11 11:57:57 2023
+ model:rut5-base sari: 28.008 bleu: 68.037 time:Thu May 11 12:10:33 2023
+ model:rut5-base sari: 29.591 bleu: 43.472 time:Thu May 11 12:23:01 2023
+ model:rut5-base sari: 30.024 bleu: 44.179 time:Thu May 11 13:11:30 2023
+ model:rut5-base sari: 29.263 bleu: 55.552 time:Thu May 11 13:24:19 2023
+ model:rut5-base sari: 20.550 bleu: 37.096 time:Thu May 11 13:37:22 2023
+ model:rut5-base sari: 28.008 bleu: 68.037 time:Thu May 11 13:50:27 2023
+ model:rut5-base sari: 28.010 bleu: 56.376 time:Thu May 11 14:03:45 2023
+ model:rut5-base sari: 28.575 bleu: 35.778 time:Fri May 12 06:56:30 2023
+ model:rut5-base sari: 28.288 bleu: 60.768 time:Fri May 12 07:06:44 2023
+ model:mt5-small sari: 32.847 bleu: 0.000 time:Fri May 12 07:21:44 2023
+ model:mt5-small sari: 37.069 bleu: 1.776 time:Fri May 12 07:34:09 2023
+ model:mt5-small sari: 32.852 bleu: 3.125 time:Fri May 12 07:46:59 2023
+ model:mt5-small sari: 32.854 bleu: 1.068 time:Fri May 12 08:09:59 2023
+ model:mt5-small sari: 38.247 bleu: 4.151 time:Fri May 12 08:43:28 2023
+ model:mt5-small sari: 36.764 bleu: 4.018 time:Fri May 12 08:57:04 2023
+ model:mt5-small sari: 38.246 bleu: 2.865 time:Fri May 12 09:10:47 2023
+ model:mt5-small sari: 32.656 bleu: 2.368 time:Fri May 12 09:24:42 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.803 bleu: 62.390 time:Fri May 12 13:11:56 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 29.341 bleu: 40.495 time:Fri May 12 13:37:00 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.872 bleu: 44.408 time:Fri May 12 13:52:27 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 16.701 bleu: 57.924 time:Fri May 12 14:08:05 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.544 bleu: 100.000 time:Fri May 12 14:23:53 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 26.505 bleu: 47.287 time:Fri May 12 14:39:49 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 29.441 bleu: 66.659 time:Fri May 12 14:55:47 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.544 bleu: 100.000 time:Fri May 12 15:19:27 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.544 bleu: 100.000 time:Fri May 12 15:35:57 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.544 bleu: 100.000 time:Fri May 12 15:52:41 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.544 bleu: 100.000 time:Fri May 12 16:09:21 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 25.709 bleu: 75.105 time:Fri May 12 16:25:38 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.544 bleu: 100.000 time:Fri May 12 16:41:57 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.699 bleu: 100.000 time:Sat May 13 10:49:16 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.699 bleu: 100.000 time:Sat May 13 10:59:46 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.699 bleu: 100.000 time:Sat May 13 11:10:25 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.699 bleu: 100.000 time:Sat May 13 11:21:12 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 28.699 bleu: 100.000 time:Sat May 13 11:32:06 2023
+ model:rut5-base dataset: senteval+ruadapt sari: 20.446 bleu: 48.246 time:Sat May 13 11:43:15 2023
+ model:paraphraser dataset: senteval+ruadapt sari: 28.699 bleu: 100.000 time:Sat May 13 15:28:10 2023
+ model:paraphraser dataset: senteval+ruadapt sari: 28.950 bleu: 37.342 time:Sat May 13 15:40:07 2023
+ model:paraphraser dataset: senteval+ruadapt sari: 28.699 bleu: 100.000 time:Sat May 13 15:52:16 2023
+ model:paraphraser dataset: senteval+ruadapt sari: 28.699 bleu: 100.000 time:Sat May 13 16:04:26 2023
+ model:paraphraser dataset: senteval+ruadapt sari: 28.699 bleu: 100.000 time:Sat May 13 16:16:44 2023
+ model:paraphraser dataset: senteval+ruadapt sari: 25.222 bleu: 70.160 time:Sat May 13 16:29:05 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:70.16035864257111 sari:25.224561237201872 fkgl:27.69399275362891 time:Wed May 17 16:24:52 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:53.16967153331756 sari:21.53108534152972 fkgl:28.829453249875414 time:Wed May 17 16:41:23 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:30.878189539634487 sari:26.942426371562462 fkgl:28.895089617120448 time:Wed May 17 16:57:53 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:100.00000000000004 sari:28.69938832886808 fkgl:28.72995551351193 time:Wed May 17 17:14:23 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:48.326978309062206 sari:30.330926258016706 fkgl:29.75620516589239 time:Wed May 17 17:30:54 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:70.16879391277372 sari:31.464585113234918 fkgl:29.65070534700182 time:Wed May 17 17:47:25 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:53.16967153331756 sari:21.53108534152972 fkgl:26.976921604096912 time:Sat May 20 13:16:22 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:54.733202423907116 sari:26.746396848838856 fkgl:27.658462007026284 time:Sat May 20 13:22:33 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:20.00800800961251 sari:29.44484755351361 fkgl:27.826502556389123 time:Sat May 20 13:28:51 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:53.16967153331756 sari:21.53108534152972 fkgl:27.61388175727427 time:Sat May 20 13:35:09 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:47.21779516453302 sari:9.249963386688941 fkgl:28.520482519994562 time:Sat May 20 13:41:31 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:75.10499815709778 sari:25.853474560834325 fkgl:28.14491049269619 time:Sat May 20 13:53:49 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:75.10499815709778 sari:25.853474560834325 fkgl:28.5300847644311 time:Sat May 20 14:12:16 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:100.00000000000004 sari:28.69938832886808 fkgl:28.67283204922758 time:Sat May 20 14:18:52 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:41.11336169005196 sari:33.372956820169726 fkgl:28.96183066463748 time:Sat May 20 14:25:26 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:53.16967153331756 sari:21.53108534152972 fkgl:29.157717934465612 time:Sat May 20 14:31:59 2023
+ model:paraphraser dataset: senteval+ruadapt bleu:54.10822690539397 sari:31.2615279247967 fkgl:29.16783609914822 time:Sat May 20 14:38:28 2023
+ model:bart dataset: senteval+ruadapt bleu:0.0 sari:37.328 fkgl:145.666 time:Mon May 22 05:07:32 2023
+ model:bart dataset: senteval+ruadapt bleu:37.992 sari:38.849 fkgl:154.682 time:Mon May 22 05:34:17 2023
+ model:bart dataset: senteval+ruadapt bleu:0.0 sari:32.764 fkgl:147.817 time:Mon May 22 06:49:59 2023
+ model:bart dataset: senteval+ruadapt bleu:0.0 sari:38.849 fkgl:154.565 time:Mon May 22 07:15:40 2023
+ model:bart dataset: senteval+ruadapt bleu:0.0 sari:35.805 fkgl:153.133 time:Mon May 22 07:41:17 2023
+ model:bart dataset: senteval+ruadapt bleu:26.864 sari:38.849 fkgl:157.005 time:Mon May 22 08:07:07 2023
+ model:rut5-base dataset: complication bleu:32.535 sari:11.504 fkgl:25.276 time:Tue May 23 07:42:29 2023
+ model:rut5-base dataset: complication bleu:86.724 sari:11.508 fkgl:22.796 time:Tue May 23 07:59:40 2023
+ model:rut5-base dataset: complication bleu:32.775 sari:29.84 fkgl:24.973 time:Wed May 24 12:39:41 2023
+ model:rut5-base dataset: complication bleu:63.405 sari:2.412 fkgl:23.093 time:Wed May 24 12:57:42 2023
+ model:rut5-base dataset: complication bleu:86.724 sari:11.508 fkgl:20.723 time:Wed May 24 13:16:44 2023
+ model:rut5-base dataset: complication bleu:77.655 sari:10.289 fkgl:18.811 time:Wed May 24 13:35:55 2023
+ model:rut5-base dataset: complication bleu:26.539 sari:22.657 fkgl:24.969 time:Wed May 24 15:17:06 2023
+ model:rut5-base dataset: complication bleu:69.208 sari:14.923 fkgl:23.069 time:Wed May 24 15:34:07 2023
+ model:rut5-base dataset: complication bleu:54.733 sari:20.15 fkgl:20.58 time:Wed May 24 15:52:08 2023
+ model:rut5-base dataset: complication bleu:86.724 sari:11.508 fkgl:19.874 time:Wed May 24 16:10:47 2023
+ model:rut5-base dataset: complication bleu:68.508 sari:20.467 fkgl:24.987 time:Wed May 24 17:47:55 2023
+ model:rut5-base dataset: complication bleu:46.826 sari:22.961 fkgl:22.422 time:Wed May 24 18:05:31 2023
+ model:rut5-base dataset: complication bleu:57.067 sari:16.759 fkgl:20.504 time:Wed May 24 18:24:12 2023
+ model:rut5-base dataset: complication bleu:80.706 sari:11.508 fkgl:18.813 time:Wed May 24 18:43:54 2023
+ model:rut5-base dataset: senteval+ruadapt bleu:36.858 sari:1.896 fkgl:29.846 time:Fri May 26 17:44:33 2023
+ model:rut5-base dataset: senteval+ruadapt bleu:60.526 sari:23.712 fkgl:29.443 time:Fri May 26 18:00:02 2023
+ model:rut5-base dataset: senteval+ruadapt bleu:68.659 sari:27.53 fkgl:30.032 time:Fri May 26 18:16:17 2023
+ model:rut5-base dataset: senteval+ruadapt bleu:100.0 sari:28.699 fkgl:30.16 time:Fri May 26 18:33:28 2023
