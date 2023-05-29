@@ -10,7 +10,10 @@ MODEL_CONFIG = {
     'rut5-base':{'pretrained_model_name':'sberbank-ai/ruT5-base', 'model_class':T5ForConditionalGeneration},
     'mt5-small':{'pretrained_model_name':'google/mt5-small', 'model_class':MT5ForConditionalGeneration},
     'paraphraser': {'pretrained_model_name':'cointegrated/rut5-base-paraphraser', 'model_class':T5ForConditionalGeneration},
-    'bart': {'pretrained_model_name':'sn4kebyt3/ru-bart-large', 'model_class':BartForConditionalGeneration}
+    'bart': {'pretrained_model_name':'sn4kebyt3/ru-bart-large', 'model_class':BartForConditionalGeneration},
+    'flan-t5':{'pretrained_model_name':'Yasbok/Flan-t5-fine-tune-PEFT-Lora', 'model_class':T5ForConditionalGeneration},
+    'rut5-absum':{'pretrained_model_name':'cointegrated/rut5-base-absum', 'model_class':T5ForConditionalGeneration},
+    'rut5-multitask':{'pretrained_model_name':'cointegrated/rut5-base-multitask', 'model_class':T5ForConditionalGeneration}
 }
 
 def cleanup():
