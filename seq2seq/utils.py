@@ -25,3 +25,9 @@ def sent_length_info(sents, tokenizer):
     print(f'Average text length: {np.mean(sent_lengths)}')
     print(f'Median text length: {np.median(sent_lengths)}')
     print(f'Max text length: {max(sent_lengths)}')
+
+def add_prefix(text):
+    return f'simplify | {text}'
+
+def add_prefixes(texts):
+    return [add_prefix(text) for text in texts]
