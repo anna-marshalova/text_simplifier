@@ -2,3 +2,5 @@
 /shelf/
 /workspace.xml
 /bot/tg_token.py
+/bot/config.json
+/extension/config.json
