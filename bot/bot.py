@@ -22,7 +22,6 @@ bot = Bot(token=TOKEN)
 dp = Dispatcher(bot=bot)
 logging.info(f'Model loaded successfully! {time.asctime()}')
 
-HOST = config['host']
 QUERY = config['query']
 
 simplifier = Simplifier()
@@ -39,16 +38,10 @@ async def simplify(message: types.Message):
     text = message.text
     user_id = message.from_user.id
     logging.info(f'User {user_id} sent text: "{text}" {time.asctime()}')
-    """
-    encoded_text = urlencode({'text': text})
-    url = f'{HOST}/{QUERY}?{encoded_text}'
-    response = requests.get(url)
-    simplified_text = json.loads(response.text)['simplified_text']
-    """
+    reply = await message.reply(answers['loading'])
     simplified_text = simplifier.simplify(text)
     logging.info(f'Text simplified: "{simplified_text}" {time.asctime()}')
-    logging.info(f'{simplified_text}')
-    await message.reply(f"{simplified_text}")
+    await reply.edit_text(simplified_text)
 
 if __name__ == "__main__":
     executor.start_polling(dp)
