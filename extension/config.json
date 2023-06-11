@@ -1,4 +1,2 @@
-{"host": "http://127.0.0.1:8080",
-"query": "simplify",
-"api_url": "https://api-inference.huggingface.co/models/M-A-E/russian_text_simplification",
-"huggingface_token": "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"}
+{"query": "simplify",
+"api_url": "https://api-inference.huggingface.co/models/M-A-E/russian_text_simplification"}
