@@ -1,4 +1,4 @@
 {"query": "simplify",
 "api_url": "https://api-inference.huggingface.co/models/M-A-E/russian_text_simplification",
-"huggingface_token": "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",
-"bot_token": "6263619426:AAFyWpcBzFruu8_9Ou0lgf0Rk5wpanvNBAo"}
+"huggingface_token": "",
+"bot_token": ""}
