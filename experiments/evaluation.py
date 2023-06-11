@@ -67,7 +67,11 @@ def compute_corpus_metrics(orig, refs, simplification_func, compute_quality_esti
             kwargs.update({'refs_sents': refs})
         if METRIC_FUNCS[metric]['requires_orig']:
             kwargs.update({'orig_sents': orig})
-        computed_metrics.update({metric: round(compute_metric(**kwargs), 3)})
+        if metric == 'bertscore':
+            computed_metric = compute_metric(**kwargs)[2]
+        else:
+            computed_metric = compute_metric(**kwargs)
+        computed_metrics.update({metric: round(computed_metric, 3)})
     if compute_quality_estimation:
         quality = corpus_quality_estimation(sys_sentences=preds, orig_sentences=orig)
     return computed_metrics, quality

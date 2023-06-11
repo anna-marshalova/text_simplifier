@@ -1,0 +1,22 @@
+{
+  "name": "Text Simplifier",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+      "tabs",
+      "contextMenus"
+     ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "logo.png"
+  },
+   "background.service_worker": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "icons" :{
+    "16":"logo.png",
+    "32":"logo.png"
+  }
+}
