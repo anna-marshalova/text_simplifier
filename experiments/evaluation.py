@@ -67,6 +67,7 @@ def compute_corpus_metrics(orig, refs, simplification_func, compute_quality_esti
             kwargs.update({'refs_sents': refs})
         if METRIC_FUNCS[metric]['requires_orig']:
             kwargs.update({'orig_sents': orig})
+        # для метрики bertscore возвращаются значения precision, recall и f1. берем только f1
         if metric == 'bertscore':
             computed_metric = compute_metric(**kwargs)[2]
         else:

@@ -2,6 +2,7 @@ import json
 import requests
 import logging
 from pathlib import Path
+from typing import Dict, Any
 import nltk
 
 nltk.download('punkt')
@@ -11,9 +12,11 @@ logging.basicConfig(level=logging.DEBUG)
 
 class Simplifier:
     def __init__(self):
+        # загружаем токены и ссылки
         self.config_path = Path(__file__).parent / "config.json"
         with open(self.config_path, "r") as file:
             self.config = json.load(file)
+        # загружаем параметры генерации
         self.default_generation_config_path = Path(__file__).parent / "generation_config.json"
         with open(self.default_generation_config_path, "r") as file:
             self.default_generation_config = json.load(file)
@@ -22,11 +25,16 @@ class Simplifier:
         self.headers = {"Authorization": f"Bearer {self.HUGGINGFACE_TOKEN}"}
         self.max_length = lambda x: len(x.split()) * self.default_generation_config['max_length_factor']
 
-    def query(self, payload):
+    def query(self, payload: Dict[str, Any]):
+        """
+        Запрос к API модели
+        :param payload: Словарь с исходным текстом и параметрами для генерации
+        :return: Упрощеннное предложение
+        """
         response = requests.post(self.API_URL, headers=self.headers, json=payload)
         return response.json()
 
-    def simplify_sent(self, sent):
+    def simplify_sent(self, sent: str):
         """
         Упрощение одного предложения
         :param sent: Предложение
@@ -36,7 +44,7 @@ class Simplifier:
             "inputs": sent,
             "parameters": {"do_sample": self.default_generation_config['do_sample'],
                            "repetition_penalty": self.default_generation_config['repetition_penalty'],
-                           "max_length" : self.max_length(sent)
+                           "max_length": self.max_length(sent)
                            }
         })
         if 'error' in output:
@@ -44,13 +52,13 @@ class Simplifier:
             return sent
         return output[0]['generated_text']
 
-    def simplify(self, text):
+    def simplify(self, text: str):
         """
         Упрощение текста
         :param text: Текст
-        :return: Упрощеннный текст
+        :return: Упрощеннный текст (либо исходный текст, если его не далось упростить)
         """
-        # делим текст на предложения и упрощаем отдельно, т.к. модель была обучена на упрощении предложений
+        # делим текст на предложения и упрощаем их отдельно, т.к. модель была обучена на упрощении предложений
         sents = nltk.sent_tokenize(text)
         simplified_sents = [self.simplify_sent(sent) for sent in sents]
         simplified_text = ' '.join(simplified_sents)

@@ -7,14 +7,17 @@ from simplifier import Simplifier
 
 logging.basicConfig(level=logging.INFO)
 
+# загружаем токены и ссылки
 config_path = Path(__file__).parent / "config.json"
 with open(config_path, "r") as file:
     config = json.load(file)
 
+# загружаем шаблоны ответов бота
 answers_path = Path(__file__).parent / "bot_answers.json"
 with open(answers_path, "r") as file:
     answers = json.load(file)
 
+# создаем бота
 PROXY_URL = "http://proxy.server:3128"
 TOKEN = config['bot_token']
 #bot = Bot(token=TOKEN, proxy=PROXY_URL)
@@ -38,9 +41,11 @@ async def simplify(message: types.Message):
     text = message.text
     user_id = message.from_user.id
     logging.info(f'User {user_id} sent text: "{text}" {time.asctime()}')
+    # пишем сообщение о начале процесса
     reply = await message.reply(answers['loading'])
     simplified_text = simplifier.simplify(text)
     logging.info(f'Text simplified: "{simplified_text}" {time.asctime()}')
+    # редактируем сообщение, вставляем в него упрощенный текст
     await reply.edit_text(simplified_text)
 
 if __name__ == "__main__":

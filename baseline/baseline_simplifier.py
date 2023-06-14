@@ -170,7 +170,7 @@ class BaselineSimplifier:
                 simple_text.append(token)
             return simple_text
 
-    def grammatical_simplification(self, text, levels=2):
+    def grammatical_simplification(self, text, levels=2, **kwargs):
         """
         Грамматическое упрощение текста
         :param text: Текст
