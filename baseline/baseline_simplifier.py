@@ -142,6 +142,7 @@ class BaselineSimplifier:
         simple_text = []
         for token in text_tokenized:
             # приводим токен в нижний регистр и лемматизируем
+            cap = token[0].isupper()
             token = token.lower()
             lemma = self.morph.parse(token)[0].normal_form
             # если слово есть в качественном словаре синонимов, заменяем его
@@ -163,12 +164,12 @@ class BaselineSimplifier:
                         simple_text.append(simple_sub)
                     # если синонимов не нашлось, оставляем слово или удаляем из текста
                     elif leave_complex:
-                        simple_text.append(token)
+                        simple_text.append(token.capitalize() if cap else token)
                 elif leave_complex:
-                    simple_text.append(token)
+                    simple_text.append(token.capitalize() if cap else token)
             else:
-                simple_text.append(token)
-            return simple_text
+                simple_text.append(token.capitalize() if cap else token)
+        return simple_text
 
     def grammatical_simplification(self, text, levels=2, **kwargs):
         """
