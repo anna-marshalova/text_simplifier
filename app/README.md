@@ -18,3 +18,4 @@ docker-compose up
 Uvicorn running on http://0.0.0.0:80
 ```
 Можно обращаться к API (см. пример запроса в `test_app.py`).
+Настройки параметров генерации можно редактировать в файле `generation_config.json`.
