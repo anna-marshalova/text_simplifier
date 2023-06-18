@@ -11,7 +11,7 @@
 
 
 **Модель:** t5 (несколько вариантов моделей). 
-Код для обучения и инференса в папке `seq2seq`, эксперименты - там же, в ноутбуке `t5 for simplification.ipynb`.
+Код для обучения и инференса в папке `seq2seq`, эксперименты - там же, в ноутбуке `seq2seq_simplification for simplification.ipynb`.
 Также провела эксперимент с созданием модели для усложнения текстов - код в ноутбуке `complication.ipynb`.
 
 **Метрики**: [SARI](https://aclanthology.org/Q16-1029.pdf), [BLEU](http://aclanthology.lst.uni-saarland.de/P02-1040/), [FKGL](https://www.semanticscholar.org/paper/Derivation-of-New-Readability-Formulas-%28Automated-Kincaid-Fishburne/26d5981f7da4b508961aea01d53cd60e2202ff2d) (модифицированная для русского языка). 

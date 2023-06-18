@@ -1,6 +1,6 @@
 {
   "name": "Text Simplifier",
-  "description": "Base Level Extension",
+  "description": "Extension For Text Simplification In Russian",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": [
@@ -9,14 +9,18 @@
      ],
   "action": {
     "default_popup": "index.html",
-    "default_icon": "logo.png"
+    "default_icon": "logo.jpg"
   },
    "background.service_worker": {
     "scripts": ["background.js"],
     "persistent": true
   },
   "icons" :{
-    "16":"logo.png",
-    "32":"logo.png"
-  }
+    "16":"logo.jpg",
+    "32":"logo.jpg"
+  },
+  "content_scripts": [{
+    "js": ["content.js"],
+    "matches": ["https://ru.wikipedia.org/*"]}],
+"host_permissions": ["http://*/*", "https://*/*"]
 }

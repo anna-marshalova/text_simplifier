@@ -1,0 +1,3 @@
+{"model_name": "M-A-E/russian_text_simplification",
+"model_id": "ruT5-base-senteval+ruadapt",
+"device": "cpu"}
