@@ -3,24 +3,8 @@
   "description": "Extension For Text Simplification In Russian",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": [
-      "tabs",
-      "contextMenus"
-     ],
   "action": {
     "default_popup": "index.html",
-    "default_icon": "logo.jpg"
-  },
-   "background.service_worker": {
-    "scripts": ["background.js"],
-    "persistent": true
-  },
-  "icons" :{
-    "16":"logo.jpg",
-    "32":"logo.jpg"
-  },
-  "content_scripts": [{
-    "js": ["content.js"],
-    "matches": ["https://ru.wikipedia.org/*"]}],
-"host_permissions": ["http://*/*", "https://*/*"]
+    "default_icon": "logo.png"
+  }
 }
