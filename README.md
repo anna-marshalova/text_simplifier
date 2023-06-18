@@ -20,6 +20,8 @@
 
 **Обертка**: cервис обернут в **телеграм-бота**, который делает запросы к API модели на huggingface ([M-A-E/russian_text_simplification](https://huggingface.co/M-A-E/russian_text_simplification)). 
 Код в папке `bot`.
-Сам бот хостится на pythonanywhere и доступен по ссылке: https://t.me/TextSimplifierBot.
-Также в разработке расширение для Google Chrome.
+Сам бот хостится на pythonanywhere и доступен по ссылке: https://t.me/TextSimplifierBot.   
+Также в разработке расширение для Google Chrome. Подробности в папке `extension`.  
+API сервиса упакован в docker-контенейнер. Подробности в `app`.
+
 
