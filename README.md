@@ -18,6 +18,8 @@
 Код для экспериментов и подсчета метрик - в папке `experiments`.
 Чекпоинты метрик для нейросети хранятся в файле с логами (`seq2seq/train.logs`). Для бейзлайна метрики в ноутбуке `baseline simplification.ipynb`.
 
-**Обертка**: cервис обернут в телеграм-бота, который делает запросы к API модели на huggingface ([M-A-E/russian_text_simplification](https://huggingface.co/M-A-E/russian_text_simplification)). 
+**Обертка**: cервис обернут в **телеграм-бота**, который делает запросы к API модели на huggingface ([M-A-E/russian_text_simplification](https://huggingface.co/M-A-E/russian_text_simplification)). 
 Код в папке `bot`.
 Сам бот хостится на pythonanywhere и доступен по ссылке: https://t.me/TextSimplifierBot.
+Также в разработке расширение для Google Chrome.
+
