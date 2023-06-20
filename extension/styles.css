@@ -1,0 +1,43 @@
+body {
+    font-family: 'Century Gothic';
+    min-width: 300px;
+    max-width: 100%;
+    position: relative;
+    vertical-align:middle;
+    padding-top: 3px;
+}
+
+button {
+    background-color: #FDE74C;
+    color:black;
+    font-weight: bold;
+    border-radius: 5px;
+    border-style: none;
+    margin-top: 10px;
+    font-size: 150%;
+}
+
+textarea {
+    font-family: 'Century Gothic';
+    border-radius: 5px;
+    width:95%;
+    height:50px;
+}
+
+.logo {
+width: 27px;
+height:30px;
+margin-right:2px;
+margin-bottom:0px;
+padding:0px;
+}
+
+.header {display: flex;
+align-items: center;
+flex-wrap: wrap;
+flex-direction: row;
+row-gap: 0px;
+padding-top:0px;}
+
+.tagline {flex: 1 0 100%;
+margin-top:0px;}

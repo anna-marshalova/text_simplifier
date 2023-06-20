@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <meta http-equiv="Content-Security-Policy" content=" script-src 'self'  'unsafe-hashes' 'unsafe-inline' 'sha256-ZX0WKR4IBJuLwFsqwXt0GrCjEJ3FkZQbWPmbbfAnpUs='">
+  <meta charset = 'utf-8' http-equiv="Content-Security-Policy" content=" script-src 'self'  'unsafe-hashes' 'unsafe-inline' 'sha256-ZX0WKR4IBJuLwFsqwXt0GrCjEJ3FkZQbWPmbbfAnpUs='">
   <link rel="stylesheet" href="styles.css">
   <body>
-    <h1>TextSimplifier</h1>
-    <textarea placeholder = 'Paste your text here' id = 'text'></textarea>
+  <div class = 'header'>
+    <img class = 'logo' src = 'lemon_no_bg.png' alt = 'logo'>
+    <h1>Squeezy</h1>
+    <p class = 'tagline'>Пусть текст станет easy-peasy-lemon-squeezy!</p>
+  </div>
+    <textarea placeholder = 'Введите текст' id = 'text'></textarea>
   </br>
-  <button id = 'submit'>Simplify!</button>
+  <button id = 'submit'>Упростить</button>
     <p id = 'simplifiedText'></p>
   </body>
 </html>

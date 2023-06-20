@@ -1,10 +1,10 @@
 {
-  "name": "Text Simplifier",
+  "name": "Squeezy",
   "description": "Extension For Text Simplification In Russian",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",
-    "default_icon": "logo.png"
+    "default_icon": "lemon_no_bg.png"
   }
 }
